@@ -13,6 +13,7 @@ npm install @dragonish/arrive-type -D
 
 Add to the `tsconfig.json` file:
 
+```json
 {
 	"compilerOptions": {
 		"typeRoots": [
@@ -21,6 +22,7 @@ Add to the `tsconfig.json` file:
 		]
 	}
 }
+```
 
 ## Credits
 
