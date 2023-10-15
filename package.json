@@ -16,7 +16,11 @@
     "postbuild": "tsx ./build.ts",
     "test": "mocha"
   },
-  "keywords": [],
+  "keywords": [
+    "type",
+    "types",
+    "arrive"
+  ],
   "publishConfig": {
     "directory": "publish"
   },
