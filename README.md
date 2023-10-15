@@ -9,19 +9,28 @@ npm install arrive
 npm install @dragonish/arrive-type -D
 ```
 
-## Usage
+## Configuration
 
 Add to the `tsconfig.json` file:
 
 ```json
 {
-	"compilerOptions": {
-		"typeRoots": [
-			"./node_modules/@types",
-			"./node_modules/@dragonish/arrive-type"
-		]
-	}
+  "compilerOptions": {
+    "typeRoots": [
+      "./node_modules/@types",
+      "./node_modules/@dragonish/arrive-type"
+    ]
+  }
 }
+```
+
+## Usage
+
+```typescript
+document.arrive<HTMLImageElement>('img', img => {
+  const src = img.src;
+  // ...
+});
 ```
 
 ## Credits
