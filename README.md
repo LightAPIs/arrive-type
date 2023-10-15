@@ -18,7 +18,7 @@ Add to the `tsconfig.json` file:
   "compilerOptions": {
     "typeRoots": [
       "./node_modules/@types",
-      "./node_modules/@dragonish/arrive-type"
+      "./node_modules/@dragonish"
     ]
   }
 }
