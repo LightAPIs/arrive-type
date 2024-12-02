@@ -37,5 +37,8 @@
     "tsx": "^3.13.0",
     "typescript": "^5.2.2",
     "vite": "^4.4.11"
+  },
+  "peerDependencies": {
+    "arrive": ">2.5.0"
   }
 }

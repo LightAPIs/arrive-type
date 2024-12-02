@@ -8,16 +8,21 @@
 export {};
 
 export interface Options {
+  /** Watch for changes to existing elements' attributes */
   fireOnAttributesModification?: boolean | undefined;
+  /** Fire callback only once, then auto-unbind */
   onceOnly?: boolean | undefined;
+  /** Fire callback for elements that already exist in the DOM */
   existing?: boolean | undefined;
+  /** Call callback with null after specified milliseconds and Auto-unbind  (0 = disabled) */
+  timeout?: number | undefined;
 }
 
 export type ArriveSignature = <E extends Element = Element>(
   element: string,
   handlerOrOptions: ((this: E, element: E) => void) | Options,
   handler?: (this: E, element: E) => void
-) => void;
+) => Promise<E>;
 export type UnbindArriveSignature = <E extends Element = Element>(
   elementOrHandler?: string | ((this: E, element: E) => void),
   handler?: (this: E, element: E) => void
@@ -26,14 +31,13 @@ export type LeaveSignature = <E extends Element = Element>(
   element: string,
   handlerOrOptions: ((this: E, element: E) => void) | Options,
   handler?: (this: E) => void
-) => void;
+) => Promise<E>;
 export type UnbindLeaveSignature = <E extends Element = Element>(
   elementOrHandler?: string | ((this: E, element: E) => void),
   handler?: (this: E, element: E) => void
 ) => void;
 
 declare global {
-  // tslint:disable-next-line no-unnecessary-class
   class Arrive {
     static unbindAllArrive: () => void;
     static unbindAllLeave: () => void;
