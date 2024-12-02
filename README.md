@@ -1,6 +1,6 @@
 # arrive-type
 
-A generic version of `@types/arrive`.
+generic type library of `arrive` package.
 
 ## Installation
 
@@ -33,10 +33,18 @@ document.arrive<HTMLImageElement>('img', img => {
 });
 ```
 
+Async/await and promise support:
+
+```typescript
+const img = await document.arrive<HTMLImageElement>('img');
+const src = img.src;
+// ...
+```
+
 ## Credits
 
-- [DefinitelyTyped/DefinitelyTyped](https://github.com/DefinitelyTyped/DefinitelyTyped)
 - [uzairfarooq/arrive](https://github.com/uzairfarooq/arrive)
+- [DefinitelyTyped/DefinitelyTyped](https://github.com/DefinitelyTyped/DefinitelyTyped)
 
 ## License
 
