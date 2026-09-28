@@ -1,4 +1,4 @@
-// Type definitions for arrive 2.4
+// Type definitions for arrive 2.5
 // Project: https://github.com/uzairfarooq/arrive
 // Definitions by: Vijay Pemmaraju <https://github.com/vijaypemmaraju>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
