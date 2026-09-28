@@ -19,21 +19,21 @@ export interface Options {
 }
 
 export type ArriveSignature = <E extends Element = Element>(
-  element: string,
+  selector: string,
   handlerOrOptions?: ((this: E, element: E) => void) | Options,
   handler?: (this: E, element: E) => void
 ) => Promise<E>;
 export type UnbindArriveSignature = <E extends Element = Element>(
-  elementOrHandler?: string | ((this: E, element: E) => void),
+  selectorOrHandler?: string | ((this: E, element: E) => void),
   handler?: (this: E, element: E) => void
 ) => void;
 export type LeaveSignature = <E extends Element = Element>(
-  element: string,
+  selector: string,
   handlerOrOptions?: ((this: E, element: E) => void) | Options,
   handler?: (this: E) => void
 ) => Promise<E>;
 export type UnbindLeaveSignature = <E extends Element = Element>(
-  elementOrHandler?: string | ((this: E, element: E) => void),
+  selectorOrHandler?: string | ((this: E, element: E) => void),
   handler?: (this: E, element: E) => void
 ) => void;
 
